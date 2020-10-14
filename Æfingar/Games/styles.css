@@ -1,0 +1,60 @@
+html{
+    background-color: #7fdc89;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: auto;
+}
+
+header{
+    background: #0099CC; ;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    width: 800px;
+}
+
+a{
+    display: flex;
+    align-content: space-around;
+}
+
+
+canvas{
+    display:flex;
+    margin: auto;
+    max-width: 400px;
+    background-color: black;
+    border: 1rem;
+}
+
+p{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    
+}
+
+button{
+    display:flex;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.games{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.visited{
+    text-decoration:none;
+    color: #cccccc;
+}
+

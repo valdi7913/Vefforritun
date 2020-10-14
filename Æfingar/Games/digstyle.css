@@ -1,0 +1,26 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: #FCAB10;   
+}
+
+#textbox{
+
+    text-decoration: none;
+}
+
+.word{
+    background-color: #f6131e;
+    padding: 1rem;
+}
+
+#myText {
+    padding: 0.5rem;
+    background-color: #F8333C;
+}

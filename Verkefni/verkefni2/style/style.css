@@ -1,0 +1,35 @@
+html{
+    font-family: "Times";
+}
+
+header {
+    margin: none;
+    padding: 0px;
+    text-align: Left;
+    background-image: url(../img/cloud.jpg);
+    color: black;
+    font-size: 30px;
+  }
+
+h1 {
+    margin: none;
+    background-image: url(../img/cloud.jpg);
+}
+
+strong {
+    color: orangered;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    }
+    
+    a:visited{
+    text-decoration: none;
+    color: black
+    }
+
+.linkur{
+    text-shadow: black
+}

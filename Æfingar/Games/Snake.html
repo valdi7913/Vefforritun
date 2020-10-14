@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="is">
+    <head>
+        <meta charset="utf-8">
+        <title>Snake game</title>
+        <link rel="stylesheet" href="styles.css">  
+
+    </head>
+    <body>
+        <header>
+            <h1>Welcome</h1>
+            <div class="games">
+                <a>Play snake<a>
+                <a href = "flappyfuglur.html"> Play Flappyfuglur </a>
+            </div>
+        </header>
+        <canvas id="gc" width="400" height="400"></canvas>
+        <script>
+    window.onload=function() {
+        canv = document.getElementById("gc");
+        ctx = canv.getContext("2d");
+        document.addEventListener("keydown",keyPush);
+        setInterval(game,1000/15);
+        document.getElementById('togglesound').onclick = function() {
+            if(sound){
+                sound = false;
+            } else {
+                sound = true;
+            }
+        }
+    }
+    xv = yv = 0;
+    px = py = 5;
+    gs = tc = 20;
+    ax = ay = 15;
+    trail=[];
+    tail = 3;
+    var sound = false;
+    var audio = new Audio();
+    var playlist = new Array('sounds/eat1.mp3', 'sounds/eat2.mp3', 'sounds/eat3.mp3');
+    var playlist2 = new Array('sounds/doh.mp3','sounds/super.mp3','sounds/beepboop.mp3','sounds/oof.mp3');
+    moved = false;
+    function game() {
+        moved = false;
+        px += xv;
+        py += yv;
+
+        lx = px - ax
+        ly = py - ay
+
+        if(px < 0) {
+            px = tc - 1;
+        }
+        if(px > tc - 1) {
+            px = 0;
+        }
+        if(py < 0) {
+            py = tc - 1;  
+        }
+        if(py > tc -1) {
+            py = 0;
+
+        
+        }
+        ctx.fillStyle="black";
+        ctx.fillRect(0,0,canv.width,canv.height);
+
+        ctx.fillStyle="lime";
+        for(var i=0;i<trail.length;i++) {
+            ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
+            if(trail[i].x == px && trail[i].y == py) {
+                tail = 3;
+                audio.src = (playlist2[Math.floor(Math.random()*playlist2.length)]);
+                if(sound) {
+                audio.play();
+                }
+            }
+        }
+
+        trail.push({x:px,y:py});
+        while(trail.length>tail) {
+            trail.shift();
+        }
+
+        if(ax == px && ay == py) {
+                tail ++;
+                ax=Math.floor(Math.random()*tc);
+                ay=Math.floor(Math.random()*tc);         
+                audio.src = (playlist[Math.floor(Math.random()*playlist.length)]);
+                if(sound) {
+                audio.play();
+                }
+            }
+
+        ctx.fillStyle="red";
+        ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
+
+        ctx.fillStyle="white";
+        ctx.font = "30px Comic-Sans";
+        ctx.fillText("Score: "+ tail,270,380);
+    }
+
+    function keyPush(evt) {
+        switch(evt.keyCode) {
+            case 37:
+                if(xv != 1 && moved == false){
+                xv=-1;yv=0;
+                moved = true;
+                }
+                break
+            case 38:
+                if(yv != 1 && moved == false){
+                xv=0;yv=-1;
+                moved = true;
+                }
+                break
+            case 39:
+                if(xv != -1 && moved == false){
+                xv=1;yv=0;
+                moved = true;
+                }
+                break
+            case 40:
+                if(yv != -1 && moved == false){
+                xv=0;yv=1;
+                moved = true;
+                }
+                break
+        }
+    }
+        </script>
+        <p> Press the arrow keys to move</p>
+        <Button id= "togglesound"> Sound on/off </Button>
+    </body>
+</html>

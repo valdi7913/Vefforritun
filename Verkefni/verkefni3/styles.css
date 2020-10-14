@@ -1,0 +1,121 @@
+html {
+    font-size: 16px;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #eeeeee;
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+}
+
+main p:first-of-type{
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.sr-only{
+    display: none;
+}
+
+footer{
+    margin: 0rem;
+    padding: 0.1rem;
+    background-color: #eeeeee;
+    font-size: 1rem;
+    text-align: center;
+}
+
+figure img {
+    margin-top: 4.35rem;
+    clear: both;
+}
+
+figcaption{
+    font-size: 1rem;
+}
+
+section img{
+    float: left;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+ul{
+    list-style: none;
+    height: 5rem;
+}
+
+ul li{
+    float: left;
+    width: 31.3%;
+    margin: 1%;
+}
+
+ul li a{
+    min-height: 6rem;
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border:1px dotted #333333;
+    box-sizing: border-box;
+}
+
+
+ul li a:hover{
+    background-color: #999999;
+}
+
+ul li a:focus{
+    background-color: #999999;
+}
+
+
+h2{
+    clear: left;
+    text-align: left;
+    font-size: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+section h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+main section p {
+    font-size: 1.5rem !important;
+    text-align: left;
+}
+
+main section p:first-of-type::first-line{
+    font-size: 2.8125rem;
+    
+}
+
+main section p:first-of-type:first-letter{
+    font-size: 5.625rem;
+}
+
+section:hover p{
+    background-color: #999999;
+}

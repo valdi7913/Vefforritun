@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Swift Digits </title>  
+        <link rel="stylesheet" href="digstyle.css"> 
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="word">
+            <span id="myText"></span>
+            </div>
+            <script>
+            window.onload = function() {
+                document.getElementById("myText").innerHTML = strengur;
+                document.addEventListener("keydown",keyPush);
+                setInterval(game,1000/15);
+                }
+                var strengur = "Test";
+                funtion game() {
+                    strengur += 'h'
+                }
+                function keyPush(evt) {
+                    if(evt.keyCode == 37) {
+                    string += 'h';
+                }
+                }
+            </script>
+        </main>
+    </body>
+</html>

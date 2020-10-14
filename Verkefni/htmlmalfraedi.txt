@@ -1,0 +1,42 @@
+Reglur:
+	Pössum inndráttinn
+
+		Whitespace (bil og nýjar línur) er ekki mikilvægt í HTML,
+		þ.a. mörg bil og mörgum línum er breytt í eitt bils
+
+		Kóði lýsir innri manneskju
+		-Óli
+	
+	Sum element "gleypa" allt sem er innan þeirra þar til þeim er lokað
+	
+		t.d. <title> og <textarea>
+
+	Ef við lokum elementi of snemma getur það leitt til villa (sérstaklega þegar unnið er með CSS)
+	sem getur verið erfitt að leita upp
+	
+	
+Afstæðar slóðir	
+
+	ef slóðin byrjar á / er faið á 'rótina' á viðkomandi vef
+	ef vísað er í img/foo.jpg er gert ráð fyrir að img/ sé mappa til í sömu möppu og skjaæið er í
+	
+	. þýðir mappan sem við erum í
+	.. þýðir mappan fyrir ofan
+
+
+	Að vísa í aðra foldera
+
+	verkefni/
+		- img/
+			- foo.jpg
+		index.html
+	
+	Ætlum að vitna í foo.jpg frá index.html
+
+	1) ./img/goo.jpg 
+	2) img/foo.jpg
+	3) /verkefni/img/foo.jpg
+	4 ../verkefni/img/foo.jpg
+
+	Þetta er allt jafngilt
+	

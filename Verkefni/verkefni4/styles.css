@@ -1,0 +1,171 @@
+* {
+  /* einfalt „reset“ */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  /* todo, skilgreina meginmáls leturgerð */
+  font-family:'Open Sans','Helvetica','Arial','sans-serif';
+  color: #222222;
+  background-color: #eeeeee;
+}
+
+a {
+  color: #222222;
+}
+
+h1, h2, h3, h4 {
+  /* todo, leturgerðir fyrir fyrirsagnir */
+  font-family:'Montaga','Georgia','serif';
+}
+
+/* header */
+header {
+  background-image: url(img/background.jpg);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-flow: column wrap;
+}
+
+header h1{
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 4rem;
+} 
+
+header h2{
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Halda utanum events og books */
+
+main{
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+}
+
+main h2{
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* events */
+
+
+#events{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  justify-content: space-around; 
+  align-items: stretch;
+  min-width: 30%;
+}
+
+
+.event{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0.5rem;
+  background-color:#cccccc;
+  min-width: 200px;
+  text-align: center;
+}
+
+.event1{
+  margin-right: 1.5rem;
+}
+
+.event3{
+  margin-left: 1.5rem;
+}
+
+h3{
+  word-wrap: break-word;
+}
+
+.italic {
+  word-wrap: break-word;
+  font-style: italic;
+}
+/* books */
+
+#books{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  
+}
+
+.book{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
+  margin: 0.5rem;
+  min-width: 160px;
+  justify-content: stretch;
+  background-color:#cccccc;
+}
+
+.book1{
+  margin-left: 0;
+}
+
+.book4{
+  margin-right: 0;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  font-style: normal;
+}
+
+.verd{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: flex-end;
+  padding: 0.5rem;
+}
+
+
+div img{
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+button {
+  /* todo, stílar fyrir kaupa button */
+  background-color: #222222;
+  color: white;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+button:hover{
+  background-color: gray;
+}
+
